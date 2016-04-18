@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<!-- Commonm -->
+    <link href="js/libs/common/css/style.css" rel="stylesheet">
+	<!-- Bootstrap -->
+    <link href="js/libs/bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Angular -->
+	<script src="js/libs/angular1.5/angular.min.js"></script>
+	<script src="js/libs/angular1.5/angular-route.min.js"></script>
+	<!-- Angular APPs -->
+	<script src="js/components/base/base.app.js"></script>
+	<script src="js/components/base/base.service.js"></script>
+	<script src="js/components/contato/contato.app.js"></script>
+	<script src="js/components/contato/contato.list.controller.js"></script>
+	<script src="js/components/contato/contato.edit.controller.js"></script>
+	<script src="js/components/usuario/usuario.app.js"></script>
+	<script src="js/components/usuario/usuario.list.controller.js"></script>
+	<script src="js/components/usuario/usuario.edit.controller.js"></script>
+		<script src="js/components/usuario/usuario.login.controller.js"></script>
+	<title>Gerenciador</title>
+	<header>
+		<span style="font-size: 40px">Gerenciador da Confeccao</span>
+	</header>
+</head>
+<body ng-app="usuarioApp">
+	<div class="container">
+		<nav></nav>
+		<main>
+			<aside>
+				<div ng-view></div>
+			</aside>
+		</main>
+	</div>
+</body>
+</html>

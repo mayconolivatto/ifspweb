@@ -1,0 +1,58 @@
+<div ng-controller="ListContatoController">
+	<div class="header">
+		<div class="titulo">
+			Listar Contatos
+		</div>
+	</div>
+	<div class="container-box down">
+		<button class="btn btn-primary heavy btn-inner" ng-click="gotoPageCriar()">Cadastrar novo contato</button>
+		<div class="box-right">
+			Pode incluir novos contatos que não cadastrados na sua base.<br> Os contatos já existentes estão na lista abaixo, clique no código se precisar modifica-las.
+		</div>
+	</div>
+	<div class="container-box">
+		<form>
+			
+		</form>
+		<table class="tabela">
+			<thead>
+				<tr class="head">
+					<th>
+						Nome
+					</th>
+					<th>
+						Endereço
+					</th>
+					<th>
+						Telefone
+					</th>
+					<th>
+						Editar
+					</th>
+					<th>
+						Excluir
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="contato in contatoList">
+					<td>
+						{{contato.nome}}
+					</td>
+					<td>
+						{{contato.endereco}}
+					</td>
+					<td>
+						{{contato.telefone}}
+					</td>
+					<td>
+						<a style="cursor: pointer;" ng-click="gotoPageEditar(contato.id)">Editar</a>
+					</td>
+					<td>
+						<a style="cursor: pointer;" ng-click="excluir(contato.id)">Excluir</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>	
+	</div>
+</div>
